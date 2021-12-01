@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Tentang MADADI</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="images/batang garing.jpeg">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Navbar  -->
+<nav class="md:flex-row bg-white shadow-lg sticky top-0 z-10 ">
+	<div class="max-w-6xl mx-auto px-4">
+		<div class="flex justify-between">
+			<div class="flex space-x-7">
+				<div>
+					<!-- Logo Batang Garing -->
+					<a href="#" class="flex items-center py-4 px-2   ">
+						<img src="images/batang garing.jpeg" alt="Logo" class="h-12 w-12 mr-2 animate-bounce">
+						<span class="font-bold font-sans text-blue-700  text-3xl animate-bounce">MADADI</span>
+					</a>
+				</div>
+
+				<!-- Isi Navbar -->
+				<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 ">
+				<div class="hidden md:flex items-center space-x-7 text-2xl ml-50 ">
+					<a href="index.html" class="py-4 px-2 text-gray-500 hover:text-indigo-400 transition duration-300" 	onmouseover="Play2Sound('mySound2')" onmouseout="StopSound('mySound2')">Batang Garing</a>
+					<a href="quiz.html" class="py-4 px-2 text-gray-500 hover:text-indigo-400 transition duration-300"	onmouseover="Play2Sound('mySound2')" onmouseout="StopSound('mySound2')">Quiz</a>
+					<a href="tentang.html" class="py-4 px-2 text-indigo-400 border-b-4 border-indigo-400 "	onmouseover="Play2Sound('mySound2')" onmouseout="StopSound('mySound2')">Tentang
+						Madadi</a>
+				</div>
+			</div>
+			</div>
+
+			<!-- Audio Autoplay Dayak Sound -->
+			<!-- <iframe src="audio/Backsound - Dayak.mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+			<div class="hidden md:flex items-center space-x-3 ">
+				<div class="tengah-audio text-center">
+					<audio class="text-center" id="myAudio" controls autoplay loop>
+						<source src="audio/Backsound - Dayak.mp3" type="audio/mpeg">
+					</audio> 
+				</div>
+				</div>
+
+			<!-- Tombol Mobile menu  -->
+			<div class="block flex items-center">
+				<button class="outline-none mobile-menu-button">
+					<svg class=" w-6 h-6 text-gray-500 hover:text-indigo-400 " x-show="!showMenu" fill="none"
+						stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+						<path d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- mobile menu -->
+	<div class="hidden mobile-menu text-3xl">
+		<ul class="">
+			<li class="active"><a href="index.html"
+					class="block text-5xl px-2 py-8 hover:bg-indigo-400 hover:text-white transition duration-300"	onmouseover="Play2Sound('mySound2')" onmouseout="StopSound('mySound2')">Batang Garing</a></li>
+			<li><a href="quiz.html" class="block text-5xl px-2 py-8 hover:bg-indigo-400 hover:text-white transition duration-300"	onmouseover="Play2Sound('mySound2')" onmouseout="StopSound('mySound2')">Quiz</a></li>
+			<li><a href="tentang.html" class="block text-5xl px-2 py-8  text-white bg-indigo-400  font-semibold"	onmouseover="Play2Sound('mySound2')" onmouseout="StopSound('mySound2')">Tentang
+					Madadi</a></li>
+		</ul>
+	</div>
+	<script>
+		const btn = document.querySelector("button.mobile-menu-button");
+		const menu = document.querySelector(".mobile-menu");
+
+		btn.addEventListener("click", () => {
+			menu.classList.toggle("hidden");
+		});
+
+		function myFunction() {
+		var x = document.getElementById("myAudio").autoplay;
+		document.getElementById("demo").innerHTML = x;
+}
+	</script>
+</nav>
+
+	<!-- Tentang Madadi -->
+	<section class="text-gray-600 body-font">
+		<div class="container px-5 py-5  mx-auto">
+			<h1 class="title-font  text-5xl mb-15 font-bold text-red-500 tracking-wide text-center  "><span class="font-serif mb-10 border-b-8 border-yellow-400">TENTANG MADADI</span> </h1>
+			<p class="text-base mt-10 text-left font-medium text-xl leading-relaxed mt-2"><span class="text-blue-500 font-bold">MADADI</span>  adalah sebuah nama team yang merupakan singkatan dari Mahrani, Dama dan Dicki. Disini kami bertiga biasanya berkumpul untuk membahas suatu ide untuk di kembangkan maupun di buat.</p>
+			<div class="flex flex-wrap sm:m-4 mx-4 mb-10 -mt-4">
+				<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+					<div class="rounded-lg h-96 overflow-hidden">
+						<img alt="content" class="object-cover object-center h-full w-full" src="Data Madadi/foto/Achmad Machrani.jpg">
+					</div>
+					<h2 class="text-xl font-medium title-font text-gray-900 mt-5">Achmad Machrani</h2>
+					<p class="text-base leading-relaxed mt-2">Halo Nama saya, Achmad Machrani biasa di panggil mahrani. Disini saya sebagai pembuat Konsep Materi Batang Garing di ppt dan word.</p>
+					<a href="https://www.instagram.com/mahranyahmad/" class="inline-flex text-white bg-red-400 border-0 mt-2 py-2 px-6 focus:outline-none hover:bg-red-300 rounded text-lg mr-3" target="_blank" 	onmouseover="Play2Sound('mySound')" onmouseout="StopSound('mySound')">Instagram</a>
+				</div>
+				<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+					<div class="rounded-lg h-96 overflow-hidden">
+						<img alt="content" class="object-cover object-center h-full w-full" src="Data Madadi/foto/Marcdicki Wahid Noriswanto.jpeg">
+					</div>
+					<h2 class="text-xl font-medium title-font text-gray-900 mt-5">Marcdicki Wahid Noriswanto</h2>
+					<p class="text-base leading-relaxed mt-2">Halo Nama saya, Marcdicki Wahid Noris wanto biasa di panggil Dicki. Disini saya sebagai pembuat Konsep ddan Ide Materi Batang Garing.</p>
+					<a href="https://www.instagram.com/marcdicki29/" class="inline-flex text-white bg-red-400 border-0 mt-2 py-2 px-6 focus:outline-none hover:bg-red-300 rounded text-lg mr-3" target="_blank" 	onmouseover="Play2Sound('mySound')" onmouseout="StopSound('mySound')">Instagram</a>
+				</div>
+				<div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+					<div class="rounded-lg h-96 overflow-hidden">
+						<img alt="content" class="object-cover object-center h-full w-full" src="Data Madadi/foto/Rachmad Ananda Damaputra.png">
+					</div>
+					<h2 class="text-xl font-medium title-font text-gray-900 mt-5">Rachmad Ananda Damaputra</h2>
+					<p class="text-base leading-relaxed mt-2">Halo, nama saya Rachmad Ananda Damaputra, biasa di panggil Dama. Disini saya sebagai Programmer Materi Pembelajaran Batang Garing.</p>
+					<a href="https://linktr.ee/damaputra" class="inline-flex text-white bg-green-500 border-0 mt-2 py-2 px-6 focus:outline-none hover:bg-green-400 rounded text-lg mr-3" target="_blank" 	onmouseover="Play2Sound('mySound')" onmouseout="StopSound('mySound')">Linktree</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+<!-- Audio Hover -->
+<div class="audio">
+	<audio id="mySound" preload="auto">
+		<source src="suara/klik3.wav" controls>
+		</source>
+	</audio>
+	<audio id="mySound2" preload="auto">
+		<source src="suara/klik2.wav" controls>
+		</source>
+	</audio>
+	<audio id="burgerSound" preload="auto">
+		<source src="suara/burger.wav" controls>
+		</source>
+	</audio>
+</div>
+
+<script src="js/suaraEffect.js"></script>
+
+</html>
